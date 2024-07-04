@@ -1,0 +1,29 @@
+{% extends 'registro/menu.html' %}
+
+{% block titulo %}
+<h1 class="mb-5">Habitaciones</h1>                                
+{% endblock titulo %}
+
+
+{% block contenido %}   
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Numerohabitacion</th>
+            <th>doble</th>
+            <th>simple</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for h in registro_habitacion  %}
+        <tr>
+            <td>{{ h.id }}</td>
+            <th>Numero de habitacion</th>
+            <td>{{ h.doble }}</td>
+            <td>{{ h.simple }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}

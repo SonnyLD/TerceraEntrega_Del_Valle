@@ -1,0 +1,29 @@
+{% extends 'registro/menu.html' %}
+
+{% block titulo %}
+<h1 class="mb-5">Pais de destino</h1>                                
+{% endblock titulo %}
+
+
+{% block contenido %}   
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>llegada</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+    {% for p in pais_destino  %}
+        <tr>
+            <td>{{ p.id }}</td>
+            <td>{{ p.nombre }}</td>
+            <td>{{ p.llegada }}</td>
+            
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}

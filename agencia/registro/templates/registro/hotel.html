@@ -1,0 +1,31 @@
+{% extends 'registro/menu.html' %}
+
+{% block titulo %}
+<h1 class="mb-5">Hotel</h1>                                
+{% endblock titulo %}
+
+
+{% block contenido %}   
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>CheckIn</th>
+            <th>CheckOut</th>
+            <th>Numero_noches</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for ho in hotel %}
+        <tr>
+            <td>{{ ho.id }}</td>
+            <td>{{ ho.nombre }}</td>
+            <td>{{ ho.CheckIn }}</td>
+            <td>{{ ho.CheckOut }}</td>
+            <td>{{ ho.Numero_noches}}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}

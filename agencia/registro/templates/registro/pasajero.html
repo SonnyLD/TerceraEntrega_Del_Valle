@@ -1,0 +1,33 @@
+{% extends 'registro/menu.html' %}
+
+{% block titulo %}
+<h1 class="mb-5">Pasajero</h1>                                
+{% endblock titulo %}
+
+
+{% block contenido %}   
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>apellido</th>
+            <th>email</th>
+            <th>sexo</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+    {% for pa in pasajero  %}
+        <tr>
+            <td>{{ pa.id }}</td>
+            <td>{{ pa.nombre }}</td>
+            <td>{{ pa.apellido }}</td>
+            <td>{{ pa.email }}</td>
+            <td>{{ pa.sexo }}</td>
+            
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}
